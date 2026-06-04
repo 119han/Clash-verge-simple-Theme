@@ -10,6 +10,4 @@
 
 ## 📝 其他
 
-- 你可以通过修改 `src/css/style.css` 文件中的 background-image: url(''); 来更换喜欢的背景图片。
-
-
+- 你可以通过修改 `css` 文件中的 background-image: url(''); 来更换喜欢的背景图片。
