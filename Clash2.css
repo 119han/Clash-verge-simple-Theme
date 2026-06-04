@@ -1,13 +1,16 @@
 #root {
   /*深色*/
   --color-dark-primary: rgba(30, 31, 39, 0.3) !important;
-  --color-dark-border: rgba(255, 255, 255, 0.2) !important;
-  --color-dark-shadow-30: rgba(255, 255, 255, 0.3) !important;
-  --color-dark-shadow-8: rgba(0, 0, 0, 0.08) !important;
+  --color-dark-scrollbar: rgba(30, 31, 39, 0.7);
 
   /*浅色*/
   --color-light-primary: rgba(255, 255, 255, 0.3) !important;
-  --color-light-border: rgba(225, 225, 225, 0.2) !important;
+  --color-light-scrollbar: rgba(255, 255, 255, 0.9);
+
+  /*阴影基础色*/
+  --color-dark-border: rgba(255, 255, 255, 0.2) !important;
+  --color-dark-shadow-30: rgba(255, 255, 255, 0.3) !important;
+  --color-dark-shadow-8: rgba(0, 0, 0, 0.08) !important;
 
   /*框的基础修改*/
   --box-filter: 4px;
@@ -31,6 +34,11 @@ section {
   background-position: center;
   background-size: cover;
   position: relative;
+  scrollbar-color: var(--color-dark-scrollbar) transparent;
+}
+
+.layout[class*="css-1li7dvq"] {
+  scrollbar-color: var(--color-light-scrollbar) transparent;
 }
 
 .layout::before {
@@ -62,6 +70,7 @@ section {
 .css-1pelo83,
 .css-3gvznh,
 .css-qyf77w,/*首界面流量统计框中小框*/
+.css-um6u34,/*首界面流量统计框*/
 .css-17rlh6j,/*规则代理大框*/
 .css-1tg4gst,/*代理中的小框*/
 .css-1mxksna/*代理中的小框*/ {
@@ -83,6 +92,7 @@ section {
 .css-1n7w8rl,
 .css-8tzhsh,
 .css-kmp0fy,/*首界面流量统计框中小框*/
+.css-1unmb9x,/*首界面流量统计框*/
 .css-ulr2qx,/*规则代理大框*/
 .css-9kkeku,/*代理中的小框*/
 .css-1d9xrv7/*代理中的小框*/ {
@@ -110,7 +120,9 @@ section {
 .css-8sla8j,
 .css-ya2z3b,
 .css-23cvz,
-.css-1ow8u3y {
+.css-1ow8u3y,
+.css-um6u34,
+.css-1unmb9x{
   transition: transform 0.3s ease;
   border-radius: var(--box-radius);
   border: 1px solid var(--color-dark-border) !important;
