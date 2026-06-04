@@ -1,0 +1,169 @@
+#root {
+  /*深色*/
+  --color-dark-primary: rgba(30, 31, 39, 0.3) !important;
+  --color-dark-border: rgba(255, 255, 255, 0.2) !important;
+  --color-dark-shadow-30: rgba(255, 255, 255, 0.3) !important;
+  --color-dark-shadow-8: rgba(0, 0, 0, 0.08) !important;
+
+  /*浅色*/
+  --color-light-primary: rgba(255, 255, 255, 0.3) !important;
+  --color-light-border: rgba(225, 225, 225, 0.2) !important;
+
+  /*框的基础修改*/
+  --box-filter: 4px;
+  --box-radius: 12px;
+}
+
+/*背景原有色替换透明*/
+.base-container,
+section {
+  background-color: rgba(0, 0, 0, 0) !important;
+}
+
+/*背景图片设置*/
+.layout {
+  /*/api/random?type=pc*//*随机壁纸*/
+  /*/images/pc/33.webp*/
+  /*/images/pc/1039.webp*/
+  /*/images/pc/947.webp*/
+  /*/images/pc/927.webp*/
+  background-image: url('https://rimg.zhuqiy.top/images/pc/927.webp');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.layout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: background 0.3s ease;
+}
+
+.layout[class*="css-1li7dvq"]::before {
+  background: rgba(0, 0, 0, 0);
+}
+
+/*深色主题主要色设置*/
+.layout-content__left,/*侧边栏*/
+.css-3e4wjh,/*默认所有框*/
+.css-1pgrx25,
+.css-q2msz6,
+.css-bjjbb7,
+.css-aafiep,
+.css-xd8r7u,/*默认所有框*/
+.css-hds0vx,/*订阅框*/
+.css-10gx02f,/*连接中的*/
+.css-1mr7979,/*首界面流量统计框中小框*/
+.css-1pelo83,
+.css-3gvznh,
+.css-qyf77w,/*首界面流量统计框中小框*/
+.css-17rlh6j,/*规则代理大框*/
+.css-1tg4gst,/*代理中的小框*/
+.css-1mxksna/*代理中的小框*/ {
+  background-color: var(--color-dark-primary) !important;
+  backdrop-filter: blur(var(--box-filter));
+}
+
+/*浅色主题主要色设置*/
+.css-1li7dvq .layout-content__left,/*侧边栏*/
+.css-td54yc,/*默认所有框*/
+.css-qhetv7,
+.css-8sla8j,
+.css-ya2z3b,
+.css-23cvz,
+.css-1ow8u3y,/*默认所有框*/
+.css-1rgmi2n,/*订阅框*/
+.css-g05pvh,/*连接中的*/
+.css-eymfee,/*首界面流量统计框中小框*/
+.css-1n7w8rl,
+.css-8tzhsh,
+.css-kmp0fy,/*首界面流量统计框中小框*/
+.css-ulr2qx,/*规则代理大框*/
+.css-9kkeku,/*代理中的小框*/
+.css-1d9xrv7/*代理中的小框*/ {
+  background-color: var(--color-light-primary) !important;
+  backdrop-filter: blur(var(--box-filter));
+}
+
+/*侧边栏*/
+.layout-content__left {
+  border-right: 1px solid var(--color-dark-border) !important;
+  box-shadow: inset 0 0.5px 0 0 var(--color-dark-shadow-30),
+    0 2px 8px var(--color-dark-shadow-8) !important;
+}
+
+
+/*默认所有框*/
+.css-3e4wjh,
+.css-1pgrx25,
+.css-q2msz6,
+.css-bjjbb7,
+.css-aafiep,
+.css-xd8r7u,
+.css-td54yc,
+.css-qhetv7,
+.css-8sla8j,
+.css-ya2z3b,
+.css-23cvz,
+.css-1ow8u3y {
+  transition: transform 0.3s ease;
+  border-radius: var(--box-radius);
+  border: 1px solid var(--color-dark-border) !important;
+  box-shadow: inset 0 0.5px 0 0 var(--color-dark-shadow-30),
+    0 2px 8px var(--color-dark-shadow-8) !important;
+}
+
+/*订阅框*/
+.css-hds0vx,
+.css-1rgmi2n {
+  border-radius: var(--box-radius);
+  box-shadow: inset 0 0.5px 0 0 var(--color-dark-shadow-30),
+    0 2px 8px var(--color-dark-shadow-8) !important;
+}
+
+/*首界面流量统计框中小框*/
+.css-1mr7979,
+.css-1pelo83,
+.css-3gvznh,
+.css-qyf77w,
+.css-eymfee,
+.css-1n7w8rl,
+.css-8tzhsh,
+.css-kmp0fy {
+  border: 1px solid var(--color-dark-border) !important;
+  box-shadow: inset 0 0.5px 0 0 var(--color-dark-shadow-30),
+    0 2px 8px var(--color-dark-shadow-8) !important;
+}
+
+
+/*规则代理大框*/
+.css-hglrle .css-17rlh6j,
+.css-17rlh6j,
+.css-hglrle .css-ulr2qx,
+.css-ulr2qx {
+  border: 1px solid var(--color-dark-border) !important;
+  box-shadow: inset 0 0.5px 0 0 var(--color-dark-shadow-30),
+    0 2px 8px var(--color-dark-shadow-8) !important;
+}
+
+/*代理中的小框*/
+.css-1tg4gst,
+.css-1mxksna,
+.css-9kkeku,
+.css-1d9xrv7 {
+  transition: transform 0.3s ease;
+  border: 1px solid var(--color-dark-border) !important;
+}
+
+
+.css-1tg4gst:hover,
+.css-1mxksna:hover,
+.css-9kkeku:hover,
+.css-1d9xrv7:hover {
+  transform: scale(1.05);
+}
