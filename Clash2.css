@@ -1,11 +1,13 @@
 #root {
   /*深色*/
   --color-dark-primary: rgba(30, 31, 39, 0.3) !important;
+  --color-dark-selected: rgba(30, 31, 39, 0.5) !important;
   --color-dark-scrollbar: rgba(30, 31, 39, 0.7);
 
   /*浅色*/
   --color-light-primary: rgba(255, 255, 255, 0.3) !important;
-  --color-light-scrollbar: rgba(255, 255, 255, 0.9);
+  --color-light-selected: rgba(255, 255, 255, 0.5) !important;
+  --color-light-scrollbar: rgba(255, 255, 255, 0.7);
 
   /*阴影基础色*/
   --color-dark-border: rgba(255, 255, 255, 0.2) !important;
@@ -25,11 +27,12 @@ section {
 
 /*背景图片设置*/
 .layout {
-  /*/api/random?type=pc*//*随机壁纸*/
+  /*https://rimg.zhuqiy.top/api/random?type=pc*//*随机壁纸*/
   /*/images/pc/33.webp*/
   /*/images/pc/1039.webp*/
   /*/images/pc/947.webp*/
   /*/images/pc/927.webp*/
+  /*https://rba.kanostar.top/landscape*//*二号随机壁纸*/
   background-image: url('https://rimg.zhuqiy.top/images/pc/927.webp');
   background-position: center;
   background-size: cover;
@@ -54,6 +57,13 @@ section {
 
 .layout[class*="css-1li7dvq"]::before {
   background: rgba(0, 0, 0, 0);
+}
+
+/*浅色所有搜索框改透明*/
+.css-1w7s8u1,
+.css-1ngg3mf .MuiInputBase-root,
+.css-1jyu4ic .MuiInputBase-root {
+  background-color: rgba(0, 0, 0, 0) !important;
 }
 
 /*深色主题主要色设置*/
@@ -127,7 +137,7 @@ section {
 .css-1ow8u3y,
 .css-um6u34,
 .css-1unmb9x{
-  transition: transform 0.3s ease;
+  transition: background 0.3s ease;
   border-radius: var(--box-radius);
   border: 1px solid var(--color-dark-border) !important;
   box-shadow: inset 0 0.5px 0 0 var(--color-dark-shadow-30),
@@ -176,6 +186,15 @@ section {
   border: 1px solid var(--color-dark-border) !important;
 }
 
+.css-1mxksna.Mui-selected,
+.css-1tg4gst.Mui-selected {
+  background-color: var(--color-dark-selected) !important;
+}
+
+.css-1d9xrv7.Mui-selected,
+.css-9kkeku.Mui-selected {
+  background-color: var(--color-light-selected) !important;
+}
 
 .css-1tg4gst:hover,
 .css-1mxksna:hover,
