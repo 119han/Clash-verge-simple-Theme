@@ -19,6 +19,11 @@
   --box-radius: 12px;
 }
 
+/*隐藏新版官方商城*/
+#root > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.windows.layout.css-l3ykv8 > div > div.layout-content__left > ul > li:nth-child(2) {
+  display: none;
+}
+
 /*背景原有色替换透明*/
 .base-container,
 section {
