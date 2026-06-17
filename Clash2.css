@@ -20,7 +20,7 @@
 }
 
 /*隐藏新版官方商城*/
-#root > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.windows.layout.css-l3ykv8 > div > div.layout-content__left > ul > li:nth-child(2) {
+#root > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation0.windows.layout > div > div.layout-content__left > ul > li:nth-child(2) {
   display: none;
 }
 
